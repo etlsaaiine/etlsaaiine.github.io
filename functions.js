@@ -1,16 +1,15 @@
-img {
-  width: 50%;
+var count = 0;
+
+function like() {
+  count += 1;
+  updateUI();
 }
 
-#like {
-  background-color: green;
+function dislike() {
+  count -= 1;
+  updateUI();
 }
 
-#dislike {
-  background-color: red;
-}
-
-body {
-  backgroud-color: purple;
-  font-family: Sans-serif;
+function updateUI() {
+  document.getElementById('count').innerHTML = count;
 }
